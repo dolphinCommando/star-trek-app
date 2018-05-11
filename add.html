@@ -66,6 +66,7 @@
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
       var newCharacter = {
+        route: $("#name").val().trim.split(' ')[0].toLowerCase(),
         name: $("#name").val().trim(),
         role: $("#role").val().trim(),
         ship: $("#ship").val().trim(),
