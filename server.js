@@ -44,7 +44,11 @@ var characters = [
 ];
 
 app.get("/", function(req, res) {
-  res.send("Welcome to the Star Trek Page!");
+  res.sendFile(path.join(__dirname, "view.html"));
+});
+
+app.get("/add", function(req, res) {
+  res.sendFile(path.join(__dirname, "add.html"));
 });
 
 // Displays all characters
