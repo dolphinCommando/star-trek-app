@@ -15,8 +15,8 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1>Star Wars Express</h1>
-      <h3>The greatest resource in the galaxy for Star Wars statistics!</h3>
+      <h1>Star Trek Express</h1>
+      <h3>The greatest resource in the Alpha Quadrant for Star Trek Lore</h3>
       <hr>
       <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New Character</button></a>
     </div>
@@ -32,7 +32,7 @@
             <input type="text" id="character-search" class="form-control">
             <br>
             <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="fa fa-search"></span> Search Your Feelings. You know it is true.</button>
+              <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="fa fa-search"></span>Ask the Computer</button>
 
             </div>
           </div>
@@ -40,15 +40,15 @@
 
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong>Character Statistics</strong></h3>
+            <h3 class="panel-title"><strong>Character Lore</strong></h3>
           </div>
           <div class="panel-body">
             <div class="well">
-              <h2 id="name">Yoda</h2>
+              <h2 id="name">Jean-Luc Picard</h2>
               <div id="stats">
-                <h3><strong>Role:</strong> <span id="role">Jedi Master</span></h3>
-                <h3><strong>Age:</strong> <span id="age">900</span></h3>
-                <h3><strong>Force Points:</strong> <span id="force-points">2000</span></h3>
+                <h3><strong>Role:</strong> <span id="role">Captain</span></h3>
+                <h3><strong>Ship:</strong> <span id="ship">USS Enterprise</span></h3>
+                <h3><strong>Hobby:</strong> <span id="hobby">Earl Grey Tea</span></h3>
               </div>
             </div>
           </div>
@@ -71,11 +71,11 @@
           $("#stats").show();
           $("#name").text(data.name);
           $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
+          $("#ship").text(data.ship);
+          $("#hobby").text(data.hobby);
         }
         else {
-          $("#name").text("The force is not strong with this one. Your character was not found.");
+          $("#name").text("The individual is not in the Federation database.");
           $("#stats").hide();
         }
       });
